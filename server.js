@@ -1,5 +1,6 @@
 console.log("Starting Web Server");
 console.log("This is our 1st project");
+
 // install express -->npm i express     Below: Building Backend Server using Nodejs Framework - Express
 const express = require("express");
 const app = express();
@@ -18,10 +19,10 @@ app.set("view engine", "ejs");
 
 // 4: Routing codes
 app.get("/hello", function (req, res) {
-    res.end(`<h1 style="background: green">Hello World!</h1>`);
+    res.end(`<h1>Hello World!</h1>`);
 });
 app.get("/gift", function (req, res) {
-    res.end(`<h1 style="background: yellow">You are in page of Gifts!</h1>`);
+    res.end(`<h1>You are in page of Gifts!</h1>`);
 });
 
 const server = http.createServer(app);
