@@ -1,5 +1,8 @@
+// ====================================   17. Building frontend using EJS traditional framework      ===================================
+
+// ============================ 16. Express framework and Building Backend Server using Nodejs Framework - Express      ==============
+// ============================ +++   17. Building frontend using EJS traditional framework      ===================================
 console.log("Starting Web Server");
-console.log("This is our 1st project");
 
 // install express -->npm i express     Below: Building Backend Server using Nodejs Framework - Express
 const express = require("express");
@@ -18,11 +21,13 @@ app.set("views", "views");
 app.set("view engine", "ejs");
 
 // 4: Routing codes
-app.get("/hello", function (req, res) {
-    res.end(`<h1>Hello World!</h1>`);
+app.post("/create-item", (req, res) => {
+    console.log(req.body);
+    res.json({ test: "success" });
 });
-app.get("/gift", function (req, res) {
-    res.end(`<h1>You are in page of Gifts!</h1>`);
+
+app.get("/", function (req, res) {
+    res.render("harid");
 });
 
 const server = http.createServer(app);
@@ -32,3 +37,5 @@ server.listen(PORT, function () {
 });
 
 // install nodemon -->npm i nodemon
+
+// ====================================   17. Building frontend using EJS traditional framework      ===================================
