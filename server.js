@@ -1,5 +1,3 @@
-// ====================================   17. Building frontend using EJS traditional framework      ===================================
-
 // ============================ 16. Express framework and Building Backend Server using Nodejs Framework - Express      ==============
 // ============================ +++   17. Building frontend using EJS traditional framework      ===================================
 console.log("Starting Web Server");
@@ -8,6 +6,16 @@ console.log("Starting Web Server");
 const express = require("express");
 const app = express();
 const http = require("http");
+const fs = require("fs"); // ==> fs = file system (core module-package, you don't need install it)
+
+let user;
+fs.readFile("database/user.json", "utf8", (err, data) => {
+    if (err) {
+        console.log("ERROR:", err);
+    } else {
+        user = JSON.parse(data);
+    }
+});
 
 // 1: Entry codes
 app.use(express.static("public"));
@@ -24,6 +32,10 @@ app.set("view engine", "ejs");
 app.post("/create-item", (req, res) => {
     console.log(req.body);
     res.json({ test: "success" });
+});
+
+app.get("/author", (req, res) => {
+    res.render("author", { user: user });
 });
 
 app.get("/", function (req, res) {
