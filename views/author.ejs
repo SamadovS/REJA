@@ -3,27 +3,25 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <link rel="stylesheet" href="/main.css" />
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
         />
-
         <script>
             src =
                 "//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js";
         </script>
         <title>Portfolio</title>
     </head>
-
     <body>
         <div class="frame">
             <div class="main_frame">
-                <!-- Left Frame -->
+                <!--Left Frame -->
                 <div class="left_frame">
+                    <!--Left-1: Profile info -->
                     <div class="left_1">
-                        <div class="left_1-1">
+                        <div class="left1-img">
                             <img
                                 src="images/profile.png"
                                 width="156px"
@@ -31,18 +29,13 @@
                                 alt=""
                             />
                         </div>
-                        <div class="left_1-2"><%=user.name%></div>
-                        <div class="left_1-3"><%=user.profession%></div>
-                        <div class="left-icons">
-                            <a class="link_href" href="">
-                                <div class="icon">
-                                    <img src="icon/Vector.svg" class="icon-1" />
-                                </div>
-                            </a>
+                        <div class="left1-name"><%=user.name%></div>
+                        <div class="left1-job"><%=user.profession%></div>
+                        <div class="left1-icons">
                             <a class="link_href" href="">
                                 <div class="icon">
                                     <img
-                                        src="icon/Vector-1.svg"
+                                        src="icon/Facebook.svg"
                                         class="icon-1"
                                     />
                                 </div>
@@ -50,7 +43,7 @@
                             <a class="link_href" href="">
                                 <div class="icon">
                                     <img
-                                        src="icon/Vector-2.svg"
+                                        src="icon/Instagram.svg"
                                         class="icon-1"
                                     />
                                 </div>
@@ -58,7 +51,7 @@
                             <a class="link_href" href="">
                                 <div class="icon">
                                     <img
-                                        src="icon/Vector-3.svg"
+                                        src="icon/Twitter.svg"
                                         class="icon-1"
                                     />
                                 </div>
@@ -66,7 +59,7 @@
                             <a class="link_href" href="">
                                 <div class="icon">
                                     <img
-                                        src="icon/Vector-4.svg"
+                                        src="icon/Linkeding.svg"
                                         class="icon-1"
                                     />
                                 </div>
@@ -74,126 +67,141 @@
                             <a class="link_href" href="">
                                 <div class="icon">
                                     <img
-                                        src="icon/Vector-5.svg"
+                                        src="icon/Youtube.svg"
+                                        class="icon-1"
+                                    />
+                                </div>
+                            </a>
+                            <a class="link_href" href="">
+                                <div class="icon">
+                                    <img
+                                        src="icon/Dribbble.svg"
                                         class="icon-1"
                                     />
                                 </div>
                             </a>
                         </div>
                     </div>
+                    <!-- End profile info -->
                     <div class="marginer"></div>
+
+                    <!--Left-2: Basic info -->
                     <div class="left_2">
-                        <div class="left_2-1">
-                            <div class="left_2-1-1">Age:</div>
-                            <div class="left_2-1-2"><%=user.age%></div>
+                        <div class="left2_basic">
+                            <div class="basic-1-1">Age:</div>
+                            <div class="basic-1-2"><%=user.age%></div>
                         </div>
-                        <div class="left_2-1">
-                            <div class="left_2-1-3">Residence:</div>
-                            <div class="left_2-1-4"><%=user.residence%></div>
+                        <div class="left2_basic">
+                            <div class="basic-2-1">Residence:</div>
+                            <div class="basic-2-2"><%=user.residence%></div>
                         </div>
-                        <div class="left_2-1">
-                            <div class="left_2-1-5">Freelance:</div>
-                            <div class="left_2-1-6">Available</div>
+                        <div class="left2_basic">
+                            <div class="basic-3-1">Freelance:</div>
+                            <div class="basic-3-2">Available</div>
                         </div>
-                        <div class="left_2-1">
-                            <div class="left_2-1-7">Address:</div>
-                            <div class="left_2-1-8"><%=user.adress%></div>
+                        <div class="left2_basic">
+                            <div class="basic-4-1">Address:</div>
+                            <div class="basic-4-2"><%=user.address%></div>
                         </div>
                     </div>
+                    <!-- End basic info -->
                     <div class="marginer"></div>
-                    <!-- LANGUAGES -->
+
+                    <!--Left-3: Languages -->
                     <div class="left_3">
-                        <div class="languages">Languages</div>
-                        <div class="bangla">
-                            <div class="bangla-1"><%=user.languages[0]%></div>
-                            <div class="bangla-2">100%</div>
+                        <div class="languages_skills">Languages</div>
+                        <div class="lang_sk">
+                            <div class="lang-sk-1"><%=user.language[0]%></div>
+                            <div class="lang-sk-2">100%</div>
                         </div>
-                        <div class="lan-border">
+                        <div class="lang_sk_border">
+                            <div class="perc-1"></div>
+                        </div>
+                        <div class="lang_sk">
+                            <div class="lang-sk-1"><%=user.language[1]%></div>
+                            <div class="lang-sk-2">80%</div>
+                        </div>
+                        <div class="lang_sk_border">
+                            <div class="perc-2"></div>
+                        </div>
+                        <div class="lang_sk">
+                            <div class="lang-sk-1"><%=user.language[2]%></div>
+                            <div class="lang-sk-2">60%</div>
+                        </div>
+                        <div class="lang_sk_border">
+                            <div class="perc-3"></div>
+                        </div>
+                    </div>
+                    <!-- End languages -->
+                    <div class="marginer"></div>
+
+                    <!--Left-4: Skills -->
+                    <div class="left_4">
+                        <div class="languages_skills">Skills</div>
+                        <div class="lang_sk">
+                            <div class="lang-sk-1"><%=user.skills[0]%></div>
+                            <div class="lang-sk-2">90%</div>
+                        </div>
+                        <div class="lang_sk_border">
                             <div class="percent-1"></div>
                         </div>
-                        <div class="bangla">
-                            <div class="bangla-1"><%=user.languages[1]%></div>
-                            <div class="bangla-2">80%</div>
+                        <div class="lang_sk">
+                            <div class="lang-sk-1"><%=user.skills[1]%></div>
+                            <div class="lang-sk-2">85%</div>
                         </div>
-                        <div class="lan-border">
+                        <div class="lang_sk_border">
                             <div class="percent-2"></div>
                         </div>
-                        <div class="bangla">
-                            <div class="bangla-1"><%=user.languages[2]%></div>
-                            <div class="bangla-2">60%</div>
+                        <div class="lang_sk">
+                            <div class="lang-sk-1"><%=user.skills[2]%></div>
+                            <div class="lang-sk-2">80%</div>
                         </div>
-                        <div class="lan-border">
+                        <div class="lang_sk_border">
                             <div class="percent-3"></div>
                         </div>
-                    </div>
-                    <!-- END LANGUAGES -->
-                    <div class="marginer"></div>
-                    <!-- SKILLS -->
-                    <div class="left_4">
-                        <div class="languages">Skills</div>
-                        <div class="bangla">
-                            <div class="bangla-1"><%=user.skills[0]%></div>
-                            <div class="bangla-2">90%</div>
+                        <div class="lang_sk">
+                            <div class="lang-sk-1"><%=user.skills[3]%></div>
+                            <div class="lang-sk-2">75%</div>
                         </div>
-                        <div class="lan-border">
-                            <div class="percent-html"></div>
+                        <div class="lang_sk_border">
+                            <div class="percent-4"></div>
                         </div>
-                        <div class="bangla">
-                            <div class="bangla-1"><%=user.skills[1]%></div>
-                            <div class="bangla-2">85%</div>
+                        <div class="lang-sk">
+                            <div class="lang-sk-1"><%=user.skills[4]%></div>
+                            <div class="lang-sk-2">85%</div>
                         </div>
-                        <div class="lan-border">
-                            <div class="percent-2"></div>
-                        </div>
-                        <div class="bangla">
-                            <div class="bangla-1"><%=user.skills[2]%></div>
-                            <div class="bangla-2">80%</div>
-                        </div>
-                        <div class="lan-border">
-                            <div class="percent-2"></div>
-                        </div>
-                        <div class="bangla">
-                            <div class="bangla-1"><%=user.skills[3]%></div>
-                            <div class="bangla-2">75%</div>
-                        </div>
-                        <div class="lan-border">
-                            <div class="percent-nodejs"></div>
-                        </div>
-                        <div class="bangla">
-                            <div class="bangla-1"><%=user.skills[4]%></div>
-                            <div class="bangla-2">85%</div>
-                        </div>
-                        <div class="lan-border">
-                            <div class="percent-2"></div>
+                        <div class="lang_sk_border">
+                            <div class="percent-5"></div>
                         </div>
                     </div>
-                    <!-- END SKILLS -->
+                    <!-- End skills -->
                     <div class="marginer"></div>
-                    <!-- EXTRA SKILLS -->
+
+                    <!-- Extra skills -->
                     <div class="left_5">
-                        <div class="ex-skills">Extra Skills</div>
-                        <div class="ex-skill-text">
+                        <div class="ex_skills">Extra Skills</div>
+                        <div class="ex_skill_text">
                             <div class="border">
                                 <div class="border-1"></div>
                                 <div class="border-2"></div>
                             </div>
                             <div class="text"><%=user.extra_skills[0]%></div>
                         </div>
-                        <div class="ex-skill-text">
+                        <div class="ex_skill_text">
                             <div class="border">
                                 <div class="border-1"></div>
                                 <div class="border-2"></div>
                             </div>
                             <div class="text"><%=user.extra_skills[1]%></div>
                         </div>
-                        <div class="ex-skill-text">
+                        <div class="ex_skill_text">
                             <div class="border">
                                 <div class="border-1"></div>
                                 <div class="border-2"></div>
                             </div>
                             <div class="text"><%=user.extra_skills[2]%></div>
                         </div>
-                        <div class="ex-skill-text">
+                        <div class="ex_skill_text">
                             <div class="border">
                                 <div class="border-1"></div>
                                 <div class="border-2"></div>
@@ -201,157 +209,136 @@
                             <div class="text"><%=user.extra_skills[3]%></div>
                         </div>
                     </div>
-                    <!-- END EXTRA SKILLS -->
                     <div class="marginer"></div>
                 </div>
-                <!-- left frame -->
+                <!-- End Left Frame -->
 
-                <!-- MIDD FRAME -->
+                <!-- Middle Frame -->
                 <div class="midd_frame">
+                    <!-- Midd top -->
                     <div class="midd_top">
-                        <div class="midd_top_div">
-                            <div class="midd_top_frame">
-                                <!-- ROUND -->
-                                <div class="round_yellow"></div>
-                                <div class="round_green"></div>
-                                <div class="round_yellow_1"></div>
-                                <div class="round_green_1"></div>
-                                <div class="rectangle_yellow"></div>
-                                <div class="rectangle_blue"></div>
-                                <div class="triangle_red"></div>
-                                <!-- END ROUND -->
-                                <div class="midd_top_main_text">
+                        <div class="mtop_div">
+                            <div class="mtop_frame">
+                                <!-- Dot -->
+                                <div class="dot1"></div>
+                                <div class="dot2"></div>
+                                <div class="dot3"></div>
+                                <div class="dot4"></div>
+                                <div class="dot5"></div>
+                                <div class="dot6"></div>
+                                <div class="dot7"></div>
+                                <!-- End Dot -->
+                                <div class="mtop_main_text">
                                     <%=user.profession%> in <%=user.work_place%>
                                 </div>
-                                <div class="midd_top_text">
-                                    <%=user.about_me%>
-                                </div>
+                                <div class="mtop_text"><%=user.about_me%></div>
                                 <a class="link_href" href="">
-                                    <div class="midd_top_btn">
-                                        <div class="btn_text">HIRE ME</div>
+                                    <div class="mtop_btn">
+                                        <div class="btn_text"></div>
                                         <div class="btn_icon">
                                             <img
-                                                src="btn_icon/Vector.svg"
+                                                src="btn_icon/hire_me.png"
                                                 alt=""
                                             />
                                         </div>
                                     </div>
                                 </a>
                             </div>
-                            <div class="midd_top_img">
-                                <img src="images/Jonibek.png" alt="" />
+                            <div class="mtop_img">
+                                <img src="images/image.png" alt="" />
                             </div>
                         </div>
                     </div>
-                    <div class="midd_bot">
-                        <div class="midd_bot_main_txt">My Services</div>
-                        <div class="midd_bot_text"><%=user.service_desc%></div>
-                        <div class="midd_boxs">
-                            <div class="boxs">
+                    <!-- End Midd top -->
+
+                    <!-- Midd bottom -->
+                    <div class="midd_bottom">
+                        <div class="mbot_main_text"></div>
+                        <div class="mbot_text"></div>
+                        <div class="midd_boxes">
+                            <div class="boxes">
                                 <div class="box">
-                                    <div class="box_img">
-                                        <img
-                                            src="box_images/Vector.svg"
-                                            alt=""
-                                        />
-                                        <img
-                                            class="coding_icon_left"
-                                            src="box_images/Vector_1_2.svg"
-                                            alt=""
-                                        />
-                                        <img
-                                            class="coding_icon_midd"
-                                            src="box_images/Vector_1.svg"
-                                            alt=""
-                                        />
-                                        <img
-                                            class="coding_icon_right"
-                                            src="box_images/Vector_1_1.svg"
-                                            alt=""
-                                        />
+                                    <div class="box-img">
+                                        <img src="box_images/ser1.svg" alt="" />
                                     </div>
-                                    <div class="box_main_txt">
+                                    <div class="box-main-text">
                                         Web Development
                                     </div>
-                                    <div class="box_text">BLog, E-commerce</div>
+                                    <div class="box-text">BLog, E-commerce</div>
                                 </div>
                             </div>
-                            <div class="boxs">
+                            <div class="boxes">
                                 <div class="box">
-                                    <div class="box_img">
-                                        <img
-                                            src="box_images/Vector-4.svg"
-                                            alt=""
-                                        />
+                                    <div class="box-img">
+                                        <img src="box_images/ser2.png" alt="" />
                                     </div>
-                                    <div class="box_main_txt">UI/UX Design</div>
-                                    <div class="box_text">
+                                    <div class="box-main-text">
+                                        UI/UX Design
+                                    </div>
+                                    <div class="box-text">
                                         Mobile App, Website Design
                                     </div>
                                 </div>
                             </div>
-                            <div class="boxs">
+                            <div class="boxes">
                                 <div class="box">
-                                    <div class="box_img">
-                                        <img
-                                            src="box_images/Vector-5.svg"
-                                            alt=""
-                                        />
+                                    <div class="box-img">
+                                        <img src="box_images/ser3.svg" alt="" />
                                     </div>
-                                    <div class="box_main_txt">
+                                    <div class="box-main-text">
                                         Sound Desigin
                                     </div>
-                                    <div class="box_text">
+                                    <div class="box-text">
                                         Voice Over, Beat Making
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="midd_boxs">
-                            <div class="boxs">
+                        <div class="midd_boxes">
+                            <div class="boxes">
                                 <div class="box">
-                                    <div class="box_img">
-                                        <img src="box_images/game.svg" alt="" />
+                                    <div class="box-img">
+                                        <img src="box_images/ser4.svg" alt="" />
                                     </div>
-                                    <div class="box_main_txt">
+                                    <div class="box-main-text">
                                         Mobile App Design
                                     </div>
-                                    <div class="box_text">
+                                    <div class="box-text">
                                         Character Design, Back End
                                     </div>
                                 </div>
                             </div>
-                            <div class="boxs">
+                            <div class="boxes">
                                 <div class="box">
-                                    <div class="box_img">
-                                        <img
-                                            src="box_images/Vector-2.svg"
-                                            alt=""
-                                        />
+                                    <div class="box-img">
+                                        <img src="box_images/ser5.svg" alt="" />
                                     </div>
-                                    <div class="box_main_txt">Photography</div>
-                                    <div class="box_text">
+                                    <div class="box-main-text">Photography</div>
+                                    <div class="box-text">
                                         Portrait, Product PhotoGraphy
                                     </div>
                                 </div>
                             </div>
-                            <div class="boxs">
+                            <div class="boxes">
                                 <div class="box">
-                                    <div class="end_box_main_text">
+                                    <div class="box-img">
+                                        <img src="menu_icon/ser1" alt="" />
+                                    </div>
+                                    <div class="end_box-main-text">
                                         Advertising
                                     </div>
-                                    <div class="end_box_text">
-                                        orem Ipsum is simply dummy text of the
+                                    <div class="end_box-text">
+                                        Lorem Ipsum is simply dummy text of the
                                         printing and typesetting industry
                                         typesetting industry industry.
                                     </div>
                                     <a class="link_href" href="">
                                         <div class="end_box_link">
-                                            <div>Order Now</div>
                                             <div>
+                                                Order Now
                                                 <img
                                                     class="end_box_icon"
-                                                    src="box_images/end_box.svg"
+                                                    src="box_images/order2.png"
                                                     alt=""
                                                 />
                                             </div>
@@ -361,14 +348,15 @@
                             </div>
                         </div>
                     </div>
+                    <!-- End Midd bottom -->
                 </div>
-                <!-- END MIDD FRAME -->
+                <!-- End Middle Frame -->
 
-                <!-- RIGHT FRAME -->
+                <!-- Right Frame -->
                 <div class="right_frame">
                     <a href="">
                         <div class="vector">
-                            <img src="menu_icons/icons/Vector.svg" alt="" />
+                            <img src="menu_icons/dark_mode.svg" alt="" />
                         </div>
                     </a>
 
@@ -376,54 +364,42 @@
                         <a class="link_href" href="">
                             <div class="menu_icon_border">
                                 <span class="tooltip">Home</span>
-                                <img
-                                    src="menu_icons/icons/Vector-1.svg"
-                                    alt=""
-                                />
+                                <img src="menu_icons/up.png" alt="" />
                             </div>
                         </a>
                         <a class="link_href" href="">
                             <div class="menu_icon_border">
                                 <span class="tooltip">coding</span>
-                                <img src="menu_icons/Vector.svg" alt="" />
+                                <img src="menu_icons/service.svg" alt="" />
                             </div>
                         </a>
                         <a class="link_href" href="">
                             <div class="menu_icon_border">
                                 <span class="tooltip">users</span>
-                                <img src="menu_icons/Vector-1.svg" alt="" />
+                                <img src="menu_icons/cv.svg" alt="" />
                             </div>
                         </a>
                         <a class="link_href" href="">
                             <div class="menu_icon_border">
                                 <span class="tooltip">store</span>
-                                <img
-                                    src="menu_icons/icons/Vector-2.svg"
-                                    alt=""
-                                />
+                                <img src="menu_icons/portfolio.svg" alt="" />
                             </div>
                         </a>
                         <a class="link_href" href="">
                             <div class="menu_icon_border">
                                 <span class="tooltip">article</span>
-                                <img
-                                    src="menu_icons/icons/Vector-3.svg"
-                                    alt=""
-                                />
+                                <img src="menu_icons/blog.svg" alt="" />
                             </div>
                         </a>
                         <a class="link_href" href="">
                             <div class="menu_icon_border">
                                 <span class="tooltip">chat</span>
-                                <img
-                                    src="menu_icons/icons/Vector-4.svg"
-                                    alt=""
-                                />
+                                <img src="menu_icons/contact.svg" alt="" />
                             </div>
                         </a>
                     </div>
                 </div>
-                <!-- END RIGHT FRAME -->
+                <!-- End Right Frame -->
             </div>
         </div>
     </body>
