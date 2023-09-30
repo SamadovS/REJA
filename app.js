@@ -1,8 +1,18 @@
 console.log("Starting Web Server");
-
-// install express -->npm i express     Below: Building Backend Server using Nodejs Framework - Express
 const express = require("express");
+const res = require("express/lib/response");
 const app = express();
+const http = require("http");
+const fs = require("fs");
+
+let user;
+fs.readFile("database/user.json", "utf8", (err, data) => {
+    if (err) {
+        console.log("Error:", err);
+    } else {
+        user = JSON.parse(data);
+    }
+});
 
 // Connect/call MongoDB
 const db = require("./server").db();

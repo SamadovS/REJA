@@ -17,9 +17,9 @@
     <body>
         <div class="frame">
             <div class="main_frame">
-                <!--Left Frame -->
+                <!-- left frame -->
                 <div class="left_frame">
-                    <!--Left-1: Profile info -->
+                    <!-- Left-1: Profile info -->
                     <div class="left_1">
                         <div class="left1-img">
                             <img
@@ -82,10 +82,9 @@
                             </a>
                         </div>
                     </div>
-                    <!-- End profile info -->
                     <div class="marginer"></div>
 
-                    <!--Left-2: Basic info -->
+                    <!-- Left-2: Basic info -->
                     <div class="left_2">
                         <div class="left2_basic">
                             <div class="basic-1-1">Age:</div>
@@ -104,38 +103,35 @@
                             <div class="basic-4-2"><%=user.address%></div>
                         </div>
                     </div>
-                    <!-- End basic info -->
                     <div class="marginer"></div>
-
-                    <!--Left-3: Languages -->
+                    <!-- Left-3: Languages -->
                     <div class="left_3">
                         <div class="languages_skills">Languages</div>
                         <div class="lang_sk">
-                            <div class="lang-sk-1"><%=user.language[0]%></div>
+                            <div class="lang-sk-1"><%=user.languages[0]%></div>
                             <div class="lang-sk-2">100%</div>
                         </div>
                         <div class="lang_sk_border">
                             <div class="perc-1"></div>
                         </div>
                         <div class="lang_sk">
-                            <div class="lang-sk-1"><%=user.language[1]%></div>
+                            <div class="lang-sk-1"><%=user.languages[1]%></div>
                             <div class="lang-sk-2">80%</div>
                         </div>
                         <div class="lang_sk_border">
                             <div class="perc-2"></div>
                         </div>
                         <div class="lang_sk">
-                            <div class="lang-sk-1"><%=user.language[2]%></div>
+                            <div class="lang-sk-1"><%=user.languages[2]%></div>
                             <div class="lang-sk-2">60%</div>
                         </div>
                         <div class="lang_sk_border">
                             <div class="perc-3"></div>
                         </div>
                     </div>
-                    <!-- End languages -->
                     <div class="marginer"></div>
 
-                    <!--Left-4: Skills -->
+                    <!-- Left-4: Skills -->
                     <div class="left_4">
                         <div class="languages_skills">Skills</div>
                         <div class="lang_sk">
@@ -166,7 +162,7 @@
                         <div class="lang_sk_border">
                             <div class="percent-4"></div>
                         </div>
-                        <div class="lang-sk">
+                        <div class="lang_sk">
                             <div class="lang-sk-1"><%=user.skills[4]%></div>
                             <div class="lang-sk-2">85%</div>
                         </div>
@@ -174,10 +170,9 @@
                             <div class="percent-5"></div>
                         </div>
                     </div>
-                    <!-- End skills -->
                     <div class="marginer"></div>
 
-                    <!-- Extra skills -->
+                    <!-- Left-4: Extra Skills -->
                     <div class="left_5">
                         <div class="ex_skills">Extra Skills</div>
                         <div class="ex_skill_text">
@@ -215,7 +210,6 @@
 
                 <!-- Middle Frame -->
                 <div class="midd_frame">
-                    <!-- Midd top -->
                     <div class="midd_top">
                         <div class="mtop_div">
                             <div class="mtop_frame">
@@ -249,12 +243,12 @@
                             </div>
                         </div>
                     </div>
-                    <!-- End Midd top -->
+                    <!-- End Midd top  -->
 
                     <!-- Midd bottom -->
-                    <div class="midd_bottom">
-                        <div class="mbot_main_text"></div>
-                        <div class="mbot_text"></div>
+                    <div class="midd_bot">
+                        <div class="mbot_main_text">My Services</div>
+                        <div class="mbot_text"><%=user.service_desk%></div>
                         <div class="midd_boxes">
                             <div class="boxes">
                                 <div class="box">
@@ -321,24 +315,21 @@
                             </div>
                             <div class="boxes">
                                 <div class="box">
-                                    <div class="box-img">
-                                        <img src="menu_icon/ser1" alt="" />
-                                    </div>
-                                    <div class="end_box-main-text">
+                                    <div class="end-box-main-text">
                                         Advertising
                                     </div>
-                                    <div class="end_box-text">
-                                        Lorem Ipsum is simply dummy text of the
+                                    <div class="end-box-text">
+                                        orem Ipsum is simply dummy text of the
                                         printing and typesetting industry
                                         typesetting industry industry.
                                     </div>
                                     <a class="link_href" href="">
-                                        <div class="end_box_link">
+                                        <div class="end-box-link">
+                                            <div>Order Now</div>
                                             <div>
-                                                Order Now
                                                 <img
-                                                    class="end_box_icon"
-                                                    src="box_images/order2.png"
+                                                    class="end-box-icon"
+                                                    src="box_images/order22.png"
                                                     alt=""
                                                 />
                                             </div>
@@ -364,7 +355,7 @@
                         <a class="link_href" href="">
                             <div class="menu_icon_border">
                                 <span class="tooltip">Home</span>
-                                <img src="menu_icons/up.png" alt="" />
+                                <img src="menu_icons/up.png" />
                             </div>
                         </a>
                         <a class="link_href" href="">
