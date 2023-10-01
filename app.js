@@ -14,14 +14,6 @@ fs.readFile("database/user.json", "utf8", (err, data) => {
     }
 });
 
-// Assuming you have an array of items
-const items = [
-    /* your items data */
-];
-
-// Render the EJS template and pass the items variable
-res.render("reja", { items: items });
-
 // Connect/call MongoDB
 const db = require("./server").db();
 
@@ -38,16 +30,16 @@ app.set("view engine", "ejs");
 
 // 4: Routing codes
 app.post("/create-item", (req, res) => {
-    console.log("user entered /create-item");
+    console.log("User entered /create-item");
     // console.log(req.body);
-    // res.json({ test: "success" });
+    // res.json({ test: "Success" });
     const new_reja = req.body.reja;
     db.collection("plans").insertOne({ reja: new_reja }, (err, data) => {
         if (err) {
             console.log(err);
-            res.end("something wrong");
+            res.end("Something went wrong");
         } else {
-            res.end("successfully added");
+            res.end("Successfully added");
         }
     });
 });
@@ -57,19 +49,18 @@ app.get("/author", (req, res) => {
 });
 
 app.get("/", function (req, res) {
-    console.log("user entered /");
+    console.log("User entered /");
     db.collection("plans")
         .find()
         .toArray((err, data) => {
             if (err) {
                 console.log(err);
-                res.end("something wrong");
+                res.end("Something went wrong");
             } else {
                 // console.log(data);
                 res.render("reja", { items: data });
             }
         });
-    res.render("reja");
 });
 
 module.exports = app;
