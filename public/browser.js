@@ -11,7 +11,7 @@ function itemTemplate(item) {
                 data-id="${item._id}"
                 class="edit-me btn btn-secondary btn-sm mr-1"
             >
-                Change
+                Edit
             </button>
             <button
                 data-id="${item._id}"
