@@ -1,5 +1,3 @@
-// Lesson 13 (for thursday)
-
 console.log("Starting Web Server");
 const express = require("express");
 const res = require("express/lib/response");

@@ -1,4 +1,3 @@
-// Lesson 13 (for thursday)
 console.log("Starting Frontend JS ");
 
 let createField = document.getElementById("create-field");
@@ -102,6 +101,7 @@ document.addEventListener("click", function (e) {
 document.getElementById("clean-all").addEventListener("click", function () {
     axios.post("/delete-all", { delete_all: true }).then((response) => {
         alert(response.data.state);
-        document.location.reload();
+        // document.location.reload();
+        document.querySelector("#item-list").innerHTML = "";
     });
 });
