@@ -43,7 +43,7 @@ document.addEventListener("click", function (e) {
     // console.log(e);
 
     // delete operations =========================================================================
-    console.log(e.target);
+    console.log(e);
 
     if (e.target.classList.contains("delete-me")) {
         // alert("You clicked 'delete' button.");
