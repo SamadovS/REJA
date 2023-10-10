@@ -105,3 +105,5 @@ document.getElementById("clean-all").addEventListener("click", function () {
         document.querySelector("#item-list").innerHTML = "";
     });
 });
+
+// sam
