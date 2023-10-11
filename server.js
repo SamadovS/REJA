@@ -28,5 +28,3 @@ mongodb.connect(
         }
     }
 );
-
-// sam
